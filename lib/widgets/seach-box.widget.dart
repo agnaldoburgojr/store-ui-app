@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_design/widgets/input-animated.widget.dart';
 
 class SearchBox extends StatefulWidget {
   @override
@@ -30,9 +31,8 @@ class _SearchBoxState extends State<SearchBox>
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          'Search',
-          style: TextStyle(color: Theme.of(context).primaryColor),
+        InputAnimated(
+          controller: _controller,
         ),
         FlatButton(
           onPressed: () {
